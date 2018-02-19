@@ -1,4 +1,4 @@
-package com.example.edgar.deckofcards;
+package com.edgarhandev.edgar.deckofcards;
 
 import org.junit.Test;
 

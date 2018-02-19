@@ -1,12 +1,15 @@
-package com.example.edgar.deckofcards;
+package com.edgarhandev.edgar.deckofcards;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public ImageView imageView;
     public TextView textView;
     public int cardsCount;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         textView = (TextView)findViewById(R.id.textView);
+
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        String YOUR_ADMOB_APP_ID = "ca-app-pub-5445092696369420~9421736633";
+        MobileAds.initialize(this, YOUR_ADMOB_APP_ID);
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     public void getNewCard() {

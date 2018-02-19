@@ -1,4 +1,4 @@
-package com.example.edgar.deckofcards;
+package com.edgarhandev.edgar.deckofcards;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

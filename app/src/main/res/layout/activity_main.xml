@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.edgar.deckofcards.MainActivity">
+    tools:context="com.edgarhandev.edgar.deckofcards.MainActivity">
 
     <Button
         android:layout_width="wrap_content"
@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/red_joker"
         android:layout_below="@+id/shuffle"
+        android:layout_above="@+id/adView"
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -28,5 +29,16 @@
         android:layout_alignParentRight="true"
         android:text="Touch cards"
         android:textSize="18dp"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5445092696369420/1351674927">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>
